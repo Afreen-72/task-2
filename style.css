@@ -1,0 +1,486 @@
+body {
+    font-family: 'Inter', sans-serif;  /* More modern font */
+    line-height: 1.8;
+    margin: 0;
+    background-color: #f9f5f6;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 25px;
+}
+
+header {
+    background: #f7dcd0;
+    color: #fff;
+    padding-top: 40px;
+    min-height: 80px;
+    border-bottom: 4px solid #e8b3a3;
+    text-align: center; /* Center heading */
+}
+
+header h1 {
+    color: #5c3d2e;
+    font-size: 2.8em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 0; /* Remove default margin for better spacing */
+}
+
+nav {
+    background: #e8b3a3;
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.1em;
+    display: flex; /* Use Flexbox for navigation */
+    justify-content: center; /* Center navigation items */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    margin: 0 10px; /* Add horizontal margin between nav items */
+}
+
+nav a:hover {
+    background: #5c3d2e;
+    color: #fff;
+}
+
+#showcase {
+    min-height: 350px;
+    background: url('makeup_banner.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #121111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showcase h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+}
+
+#showcase p {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent background for better readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#content-area {
+    padding: 30px;
+    background: #fff;
+    display: grid; /* Use Grid for content layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid columns */
+    gap: 30px; /* Add gap between grid items */
+}
+
+.makeup-post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 0; /* Remove bottom margin, grid handles spacing */
+    background: #fefefe;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+.makeup-post:hover {
+    transform: translateY(-5px); /* Slightly move up on hover */
+}
+
+.makeup-post img {
+    width: 100%; /* Make images responsive within their container */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px #ccc;
+}
+
+.makeup-post h2 {
+    color: #e8b3a3;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.makeup-post p {
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+.makeup-post a {
+    display: inline-block;
+    background: #e8b3a3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px #ccc;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.makeup-post a:hover {
+    background: #5c3d2e;
+}
+
+footer {
+    background: #5c3d2e;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: block;
+    margin: 30px auto 0;
+    box-shadow: 2px 2px 5px #ccc;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #5c3d2e;
+}
+
+#subscription-form {
+    background-color: #f7dcd0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #e8b3a3;
+}
+
+#subscription-form h2 {
+    color: #5c3d2e;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#subscription-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#subscription-form input[type="text"],
+#subscription-form input[type="email"] {
+    padding: 12px;
+    margin: 8px 0;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #e8b3a3;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+#subscription-form input[type="text"]:focus,
+#subscription-form input[type="email"]:focus {
+    outline: none;
+    border-color: #5c3d2e;
+}
+
+
+#subscription-form button {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none; /* Initially hide error messages */
+}
+
+.error-message.show {
+    display: block; /* Show error message when the 'show' class is added */
+}
+
+#todo-list-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#todo-list-container h2 {
+    color: #e8b3a3;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#todo-input-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e8b3a3;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+    outline: none;
+    border-color: #5c3d2e;
+}
+
+#add-todo-button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#add-todo-button:hover {
+    background-color: #5c3d2e;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#todo-list li:hover{
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+#todo-list li span{
+    word-break: break-all;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.delete-todo-button {
+    background-color: #e8b3a3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.delete-todo-button:hover {
+    background-color: #5c3d2e;
+}
+/* Gallery Styles */
+#image-gallery-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#image-gallery-container h2 {
+    color: #e8b3a3;
+    font-size: 2em;
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#image-upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#image-upload {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+#upload-image-button {
+    background-color: #e8b3a3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#upload-image-button:hover {
+    background-color: #5c3d2e;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+#image-gallery li {
+    position: relative; /* Make list items relative for absolute positioning of delete button */
+    border-radius: 8px;
+    overflow: hidden;  /* Ensure image doesn't overflow rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to gallery items */
+     transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#image-gallery li:hover{
+     transform: scale(1.05); /* Slightly larger on hover */
+}
+
+#image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+#image-gallery li:hover img {
+   /* transform: scale(1.1);  Enlarge image on hover */ /* Removed to prevent image overflow */
+}
+
+.delete-image-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(232, 179, 163, 0.7); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+#image-gallery li:hover .delete-image-button {
+    opacity: 1; /* Show delete button on hover */
+}
+
+.delete-image-button:hover {
+    background-color: #5c3d2e;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    #showcase h1 {
+        font-size: 2.5em;
+    }
+
+    #showcase p {
+        font-size: 1.2em;
+    }
+
+    #content-area {
+        grid-template-columns: 1fr;
+    }
+    #subscription-form input[type="text"],
+    #subscription-form input[type="email"]{
+         width: 95%;
+    }
+    #subscription-form button{
+         width: 95%;
+    }
+    #todo-input-area {
+        flex-direction: column;
+    }
+    #todo-input{
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 10px;
+    }
+    #add-todo-button{
+        border-radius: 0 0 5px 5px;85
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #showcase h1 {
+        font-size: 2em;
+    }
+
+    #showcase p {
+        font-size: 1em;
+    }
+     .makeup-post img{
+        width: 95%;
+     }
+}
